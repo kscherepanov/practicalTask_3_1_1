@@ -45,7 +45,6 @@ public class UserDaoImp implements UserDao {
     @Override
     public void delete(Long id) {
         User user = entityManager.find(User.class, id);
-        entityManager.detach(user);
 
         entityManager.remove(user);
     }
